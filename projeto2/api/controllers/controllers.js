@@ -1,6 +1,8 @@
 const {response} = require('express')
 const models = require ('../models/models.js')
 const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
+const axios = require("axios")
+const cors = require('cors')
  
 module.exports = {
     rotaRaiz,
@@ -114,7 +116,7 @@ function sabespgetbyid(req, res) {
     const url = `http://sabesp-api.herokuapp.com/`+ sab
     console.log("Endereço:" + url)
 
-    fetch(url)
+    axios.get(url)
         .then((response) => response.json())
         .then(data => {
             dados = data

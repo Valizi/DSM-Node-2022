@@ -38,13 +38,9 @@ function cepGetById(req, res) {
     const url = `http://viacep.com.br/ws/`+cep+`/json/`
     console.log("Endereço:" + url)
 
-    fetch(url)
-        .then((response) => response.json())
-        .then(data => {
-            dados = data
-            res.json({message:dados})
-        })
-        .then(response => console.log(dados))
+    axios.get(url)
+        .then((response) => console.log(response.data))
+     
         .catch(function(error){
             console.log("Erro na requisição");
         })
@@ -52,6 +48,7 @@ function cepGetById(req, res) {
             console.log("Sempre apresentrá esta mensagem")
         });
 }  
+
 
 function livrosGetById(req, res) {
     const livro = req.params.livroid;
@@ -94,6 +91,7 @@ function githubGetById(req, res) {
         const url = `https://api/github/user/` + github
         console.log("Endereço:" + url)
     
+        //fetch(url)
         fetch(url)
             .then((response) => response.json())
             .then(data => {
@@ -116,12 +114,9 @@ function sabespgetbyid(req, res) {
     const url = `http://sabesp-api.herokuapp.com/`+ sab
     console.log("Endereço:" + url)
 
-    axios.get(url)
+    fetch(url)
         .then((response) => response.json())
-        .then(data => {
-            dados = data
-            res.json({message:dados})
-        })
+       
         .then(response => console.log(dados))
         .catch(function(error){
             console.log("Erro na requisição");

@@ -1,3 +1,3 @@
-const controllerNoticias = require('../controllers/noticiasControllers')
+const Cnoticias = require('../controllers/noticiasControllers')
 
-app.get('/noticias/noticiasMenu', controllerNoticias.menu)
+app.get('noticias/noticiasMenu', Cnoticias.menu)

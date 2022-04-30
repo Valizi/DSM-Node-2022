@@ -8,7 +8,7 @@ server.use(body.json())
 server.set('porta', 3001)
 server.set('url', 'http://localhost:')
 
-consign({ cwd: 'api'})
+consign({ cwd: './src/api'})
     .include('models')
     .then('controllers')
     .then('routes')

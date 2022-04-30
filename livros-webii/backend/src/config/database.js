@@ -3,9 +3,10 @@ module.exports = {
     dialect : 'mysql',
     username:'root',
     password: "fatec123*",
-    databases: "webii",
+    database: "webiiorm",
     define:{
         timestamps: true,
         underscored: true,
     }
 };
+

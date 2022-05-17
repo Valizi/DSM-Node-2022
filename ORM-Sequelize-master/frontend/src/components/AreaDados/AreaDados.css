@@ -1,15 +1,9 @@
 .AreaDados {
-height: 8vh;
-border: 0.2vh;
+height: 81vh;
+border: 0.2vh solid blue;
 
-margin: 0.2%;
-background-color: aqua;
-
-padding-top: ;
-
-
-box-shadow: 0.1; 
-background-color: gold;
+margin: 0.2% 0.2% 0.2% 0.2%;''
+background-color: rgb(28, 255, 179);
 
 
 
